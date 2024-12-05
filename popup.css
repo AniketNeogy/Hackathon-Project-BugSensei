@@ -1,0 +1,123 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  color: white;
+  margin: 0;
+  padding: 20px 0 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  background: rgba(0, 0, 0, 0.85);
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+  width: 90%;
+  max-width: 400px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+label {
+  margin-top: 10px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+input, select, textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  font-size: 1rem;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+input::placeholder, textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+button {
+  padding: 10px;
+  background: linear-gradient(45deg, #ff8c00, #ff3d00);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #ff3d00, #ff8c00);
+  transform: scale(1.05);
+}
+
+button:disabled {
+  background: #ccc;
+  cursor: not-allowed; 
+  pointer-events: none;
+}
+
+button:disabled:hover {
+  background: #ccc; 
+  transform: none; 
+}
+
+#screenshots {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+#screenshots img {
+  width: 80px;
+  height: auto;
+  border: 3px solid white;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Spinner Style */
+.spinner {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #3498db;
+  border-radius: 50%;
+  width: 30px; /* Smaller size */
+  height: 30px; /* Smaller size */
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}

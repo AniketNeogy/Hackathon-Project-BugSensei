@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BugSensei</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="container">
+    <h1>BugSensei</h1>
+    <form id="defectForm">
+      <label for="title">Title</label>
+      <input type="text" id="title" name="title" required>
+
+      <label for="severity">Severity</label>
+      <select id="severity" name="severity">
+        <option value="1">Blocker</option>
+        <option value="2">Critical</option>
+        <option value="3">Major</option>
+        <option value="4">Normal</option>
+        <option value="5">Minor</option>
+        <option value="6">Trivial</option>
+      </select>
+
+      <label for="actualResult">Actual Result</label>
+      <textarea id="actualResult" name="actualResult" required></textarea>
+
+      <label for="stepsToReproduce">Steps to Reproduce</label>
+      <textarea id="stepsToReproduce" name="stepsToReproduce" required></textarea>
+
+      <button type="button" id="takeScreenshot">Take Screenshot</button>
+      <div id="screenshots"></div>
+
+      <button type="submit">Submit Defect</button>
+    </form>
+    <div id="resultMessage"></div>
+
+    <!-- Loading Spinner -->
+    <div id="loader" style="display: none;">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
