@@ -10,6 +10,20 @@
   <div class="container">
     <h1>BugSensei</h1>
     <form id="defectForm">
+      <!-- Settings icon link -->
+      <div class="settings-container">
+        <a href="settings.html" id="settingsLink">
+          <img src="settings-icon.png" alt="Settings" class="settings-icon">
+        </a>
+      </div>
+
+      <!-- Project Dropdown -->
+      <label for="projectSelect">Project</label>
+      <select id="projectSelect" name="projectSelect" required>
+        <option value="">-- Select a Project --</option>
+        <!-- Options will be populated dynamically -->
+      </select>
+
       <label for="title">Title</label>
       <input type="text" id="title" name="title" required>
 

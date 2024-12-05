@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Settings</title>
+  <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+  <div class="settings-container">
+    <h2>Extension Settings</h2>
+    
+    <form id="settingsForm">
+      <label for="apiToken">API Token <span id="toggleToken" style="cursor: pointer;">👁️</span></label>
+      <input type="password" id="apiToken" placeholder="Enter your API Token" required />
+      
+      <label for="projectCodes">Enter Project Codes (Comma Separated)</label>
+      <input type="text" id="projectCodes" placeholder="Enter multiple project codes" required />
+
+      <button type="submit">Save Settings</button>
+    </form>
+
+    <!-- Removed inline `onclick` here -->
+    <button id="backButton">Back</button>
+  </div>
+
+  <script src="settings.js"></script>
+</body>
+</html>

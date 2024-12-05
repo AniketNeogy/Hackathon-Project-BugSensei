@@ -2,16 +2,20 @@
   "manifest_version": 3,
   "name": "BugSensei",
   "version": "1.0",
-  "description": "Log defects to Qase directly from your browser.",
-  "permissions": ["tabs", "activeTab", "storage", "scripting"],
-  "host_permissions": ["<all_urls>"],
-  "background": {
-    "service_worker": "background.js"
-  },
+  "description": "Log bugs and take screenshots easily.",
   "action": {
     "default_popup": "popup.html",
     "default_icon": "icon.png"
   },
+  "options_page": "settings.html",
+  "permissions": [
+    "storage",
+    "activeTab"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "host_permissions": ["<all_urls>"],
   "icons": {
     "48": "icon.png"
   }
